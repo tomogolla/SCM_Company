@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers - SCM Dashboard</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+        }
+        #customers-content {
+            margin: 20px;
+        }
+        #customers-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #customers-table th, #customers-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        #customers-table th {
+            background-color: #f4f4f4;
+        }
+        .no-data {
+            text-align: center;
+            padding: 20px;
+        }
+        .button-container {
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .dialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .dialog.open {
+            display: block;
+        }
+        .dialog h3 {
+            margin-top: 0;
+        }
+        .dialog label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .dialog input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        .dialog button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Customers</h1>
+        <a href="index.html">Back to Dashboard</a>
+    </header>
+
+    <div class="button-container">
+        <button id="add-customer-btn">Add New Customer</button>
+        <button id="view-recent-customers-btn">View Recent Customers</button>
+        <button id="view-customer-trends-btn">View Customer Trends</button>
+    </div>
+
+    <div id="customers-content">
+        <table id="customers-table">
+            <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Gender</th>
+                    <th>Job Title</th>
+                    <th>Phone Number</th>
+                    <th>Email Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody id="customer-table-body">
+                <!-- Dynamic data to be loaded here via JS -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add Customer Dialog -->
+    <div id="add-customer-dialog" class="dialog">
+        <h3>Add New Customer</h3>
+        <label for="add-CustomerID">Customer ID:</label>
+        <input type="text" id="add-CustomerID">
+        <label for="add-CustomerName">Customer Name:</label>
+        <input type="text" id="add-CustomerName">
+        <label for="add-Gender">Gender:</label>
+        <input type="text" id="add-Gender">
+        <label for="add-JobTitle">Job Title:</label>
+        <input type="text" id="add-JobTitle">
+        <label for="add-PhoneNumber">Phone Number:</label>
+        <input type="text" id="add-PhoneNumber">
+        <label for="add-EmailAddress">Email Address:</label>
+        <input type="email" id="add-EmailAddress">
+        <label for="add-City">City:</label>
+        <input type="text" id="add-City">
+        <label for="add-State">State:</label>
+        <input type="text" id="add-State">
+        <button id="submit-add-customer">Add Customer</button>
+        <button id="close-add-customer">Close</button>
+    </div>
+
+    <!-- Edit Customer Dialog -->
+    <div id="edit-customer-dialog" class="dialog">
+        <h3>Edit Customer</h3>
+        <label for="edit-CustomerID">Customer ID:</label>
+        <input type="text" id="edit-CustomerID" disabled>
+        <label for="edit-CustomerName">Customer Name:</label>
+        <input type="text" id="edit-CustomerName">
+        <label for="edit-Gender">Gender:</label>
+        <input type="text" id="edit-Gender">
+        <label for="edit-JobTitle">Job Title:</label>
+        <input type="text" id="edit-JobTitle">
+        <label for="edit-PhoneNumber">Phone Number:</label>
+        <input type="text" id="edit-PhoneNumber">
+        <label for="edit-EmailAddress">Email Address:</label>
+        <input type="email" id="edit-EmailAddress">
+        <label for="edit-City">City:</label>
+        <input type="text" id="edit-City">
+        <label for="edit-State">State:</label>
+        <input type="text" id="edit-State">
+        <button id="submit-edit-customer">Save Changes</button>
+        <button id="close-edit-customer">Close</button>
+    </div>
+
+    <script src="js/customer.js"></script>
+</body>
+</html>

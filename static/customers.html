@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders Dashboard</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f6f9;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .sidebar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #31c38f;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar ul li a:hover {
+            color: #31c38f;
+        }
+
+        .sidebar ul li a span {
+            margin-left: 10px;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex-grow: 1;
+            padding: 30px;
+        }
+
+        .orders-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .orders-header h1 {
+            font-size: 24px;
+        }
+
+        .orders-header .filter-buttons {
+            display: flex;
+        }
+
+        .orders-header .filter-buttons button {
+            background-color: #f3f6f9;
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        .orders-header .filter-buttons button.active {
+            background-color: #31c38f;
+            color: #fff;
+        }
+
+        .orders-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .order-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .order-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .order-card .order-details {
+            margin-bottom: 20px;
+        }
+
+        .order-card .order-total {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .order-card .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .order-card .buttons button {
+            background-color: #31c38f;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .order-card .buttons button:nth-child(1) {
+            background-color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">bitepoint</div>
+        <ul>
+            <li><a href="#"><i class="fa fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="#"><i class="fa fa-bars"></i><span>Menu</span></a></li>
+            <li><a href="#"><i class="fa fa-list"></i><span>Orders</span></a></li>
+            <li><a href="#"><i class="fa fa-table"></i><span>Table</span></a></li>
+            <li><a href="#"><i class="fa fa-calculator"></i><span>Accounting</span></a></li>
+            <li><a href="#"><i class="fa fa-cog"></i><span>Settings</span></a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="orders-header">
+            <h1>Orders</h1>
+            <div class="filter-buttons">
+                <button class="active">All</button>
+                <button>On Process</button>
+                <button>Completed</button>
+            </div>
+        </div>
+
+        <div class="orders-grid">
+            <!-- Order Card -->
+            <div class="order-card">
+                <h3>Ariel Hikmat</h3>
+                <div class="order-details">
+                    <p>Scrambled Eggs with Toast - $15.99</p>
+                    <p>Smoked Salmon Bagel - $14.49</p>
+                    <p>Classic Lemonade - $6.49</p>
+                </div>
+                <div class="order-total">Total: $87.34</div>
+                <div class="buttons">
+                    <button>See Details</button>
+                    <button>Pay Bills</button>
+                </div>
+            </div>
+
+            <!-- Order Card -->
+            <div class="order-card">
+                <h3>Denis Freeman</h3>
+                <div class="order-details">
+                    <p>Classic Cheeseburger - $12.99</p>
+                    <p>Fish and Chips - $14.99</p>
+                    <p>Water - $2.00</p>
+                </div>
+                <div class="order-total">Total: $57.87</div>
+                <div class="buttons">
+                    <button>See Details</button>
+                    <button>Pay Bills</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <h3>Morgan Cox</h3>
+                <div class="order-details">
+                    <p>Vegetable  pad Trial - $16.99</p>
+                    <p>Shomo Tacos - $10.49</p>
+                    <p>Belgan waters - $36.94</p>
+                </div>
+                <div class="order-total">Total: $64.42</div>
+                <div class="buttons">
+                    <button>See Details</button>
+                    <button>Pay Bills</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <h3>Paul Rey</h3>
+                <div class="order-details">
+                    <p>Margherita pizza - $16.99</p>
+                    <p>Belgian waters - $19.49</p>
+                    <p>Virgin Majito - $38.08</p>
+                    <p>Classic Lemonade - $25.00</p>
+                </div>
+                <div class="order-total">Total: $107.57</div>
+                <div class="buttons">
+                    <button>See Details</button>
+                    <button>Pay Bills</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <h3>Meja Becker</h3>
+                <div class="order-details">
+                    <p>Fetta stuffed mushroom - $18.99</p>
+                    <p>Lobster Levica - $17.99</p>
+                    <p>Thai coconut curry - $14.49</p>
+                </div>
+                <div class="order-total">Total: $51.47</div>
+                <div class="buttons">
+                    <button>See Details</button>
+                    <button>Pay Bills</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <h3>Erwan Richard</h3>
+                <div class="order-details">
+                    <p>Creamy Garlic Chicken - $15.09</p>
+                    <p>Greek Gyro plate - $13.99</p>
+                    <p>Belgian Water - $12.00</p>
+                </div>
+                <div class="order-total">Total: $41.08</div>
+                <div class="buttons">
+                    <button>See Details</button>
+                    <button>Pay Bills</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
