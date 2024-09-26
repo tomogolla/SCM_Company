@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - SCM Dashboard</title>
+    <style>
+        /* General layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            position: absolute;
+            right: 20px;
+            top: 25px;
+        }
+
+        #dashboard-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #f5f5f5;
+            height: 25vh; /* Takes up the top 1/4 of the page */
+        }
+
+        .dashboard-card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 30%;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dashboard-card h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* products table */
+        #products-content {
+            padding: 20px;
+            height: 75vh; /* Takes up the bottom 3/4 of the page */
+            overflow-y: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        td {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Orders</h1>
+        <a href="index.html">Back to Dashboard</a>
+    </header>
+
+    <!-- Top 1/4 of the page: Cards for actions -->
+    <section id="dashboard-section">
+        <div class="dashboard-card">
+            <h3>Create New Product</h3>
+            <button onclick="createProduct()">New Product</button>
+            <h3>Edit Product</h3>
+            <button onclick="editProduct()">Edit Product</button>
+        </div>
+        
+        <div class="dashboard-card">
+            <h3>Recently Edited products</h3>
+            <button onclick="viewRecentProducts()">View Recent</button>
+        </div>
+        <div class="dashboard-card">
+            <h3>Inventory Trends</h3>
+            <div id="inventory-trends-chart">
+                <!-- Placeholder for chart -->
+                <canvas id="trendsChart" width="200" height="100"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom 3/4 of the page: Orders table -->
+    <div id="products-content">
+        <table id="products-table">
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Supplier ID</th>
+                    <th>Car maker</th>
+                    <th>Car Model</th>
+                    <th>Car color</th>
+                    <th>Car Model Year Code</th>
+                    <th>Car Price</th>
+                    <th>Postal Code</th>                    
+                </tr>
+            </thead>
+            <tbody id="products-table-body">
+                <!-- Dynamic data to be loaded here via JS -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/products.js"></script>
+
+    <script>
+        // Functions for buttons (stubs, replace with actual functionality)
+        function createProduct() {
+            alert('Create New Product button clicked.');
+        }
+
+        function viewRecentCustomers() {
+            alert('View Recently Created Customers button clicked.');
+        }
+
+        // JavaScript code to load the chart (replace with actual chart rendering code)
+        const ctx = document.getElementById('trendsChart').getContext('2d');
+        const trendsChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Customer Trends',
+                    data: [10, 20, 30, 40, 50, 60, 70],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+    <!-- Import Chart.js from CDN for the line chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
