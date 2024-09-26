@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>SCM2</title>
+    <!-- Non-scrollable Top Bar -->
+    <header style="position:fixed; top:0;">
+        <h3 style="margin:0; padding-left: 0px;">Tom Ogolla</h3>
+    </header>    
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <section style="padding-top: 80px">
+        <nav style="display: flex; justify-content: space-between; padding: 10px 20px;">
+            <div>
+                <h2>SCM-Company Ltd.</h2>
+            </div>
+            <div>
+                <a href="#dashboard">Dashboard</a> 
+                <a href="#reports">Reports</a> 
+                <a href="#insights">Insights</a> 
+                <a href="#charts">Charts and Visuals</a>
+            </div>
+        </nav>
+    </section>
+    
+    <!-- Sub Navbar -->
+    <div class="sub-navbar">
+        <ul class="list-unstyled d-flex">
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Vendors</a></li>
+            <li><a href="#">Items</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a href="#">Accounts</a></li>
+        </ul>
+    </div>
+
+    <!-- Headline and Actions Section -->
+    
+    <div class="headline-container">
+        <section>
+            <div class="headline-content">
+                <div class="headline-text">
+                    <h2>Good Morning</h2>
+                    <p>Get started on today's work...</p>
+                </div>
+                <div class="action-links">
+                    <a href="#customer-modal">+ Customer</a>
+                    <a href="#order-modal">+ Order</a>
+                    <a href="#quote-modal">+ Quote</a>
+                    <a href="#invoice-modal">+ Invoice</a>
+                    <a href="#vendor-modal">+ Vendor</a>
+                    <a href="#product-modal">+ Product</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="section-title">
+        <h2>Activities</h2>
+        <hr class="section-line">
+    </div>    
+    <div class="activities-row">
+        <div class="insights-box">
+            <p>Total Revenue</p>
+            <h2>$400,382</h2>
+            <a href="#">> See more</a>
+        </div>
+        <div class="insights-box">
+            <p>Inventory</p>
+            <h2>4,345 Items</h2>
+            <a href="#">> See more</a>
+        </div>
+        <div class="insights-box">
+            <p>Orders</p>
+            <h2>43 Orders</h2>
+            <a href="#">> See more</a>
+        </div>
+    </div>
+    <div class="section-title">
+        <h2>Insights</h2>
+        <hr class="section-line">
+    </div>
+
+
+    <!-- Weekly Insights Section -->
+    <section style="padding: 10px;">
+        <!--div style="display: flex; flex: none;"-->
+            <div class="insights-activities">
+                <div class="activity-box">
+                    <p>Sales This Month</p>
+                    <h2>£89,606</h2>
+                    <a href="#">See more</a>
+                </div>
+                <div class="activity-box">                    
+                    <iframe 
+                        width="100" 
+                        height="150" 
+                        src="" 
+                        frameborder="0" 
+                        style="border:0; overflow:hidden;" 
+                        allowfullscreen 
+                        sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+                    </iframe>
+                </div>
+                <div class="activity-box">
+                    <p>Overdue Purchase Invoice Amount</p>
+                    <h2>£89,004</h2>
+                    <a href="#">See more</a>
+                </div>
+                <div class="activity-box">
+                    <p>Sales Invoices Predicted Overdue</p>
+                    <h2>0</h2>
+                    <a href="#">See more</a>
+                </div>
+                <div class="activity-box">
+                    <p>Purchase Orders This Month</p>
+                    <h2>£45,500</h2>
+                    <a href="#">See more</a>
+                </div>
+        </div>
+    </section>
+
+    <div class="section-title">
+        <h2>Dashboard</h2>
+        <hr class="section-line">
+    </div>
+    
+
+    <!-- Tables and Graphs Section -->
+    <section style="padding: 20px; border-bottom: 1px solid #ccc;">
+        <div style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; padding-right: 10px;">               
+                <div class="chart-visualization">
+                    <iframe width="90%" height="700" src="https://lookerstudio.google.com/embed/reporting/6da8bbb3-bc8e-4638-9620-e5269f563748/page/3y5CE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                </div>
+            </div>
+            <!-- Top Right: Looker Studio Visualization -->
+        
+        </div>
+    </section>
+    <div class="section-title">
+        <h2>Main Dashboard</h2>
+        <hr class="section-line">
+    </div>
+    
+
+    <!-- Tables and Graphs Section -->
+    <section style="padding: 20px; border-bottom: 1px solid #ccc;">
+        <div style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; padding-right: 10px;">               
+                <div class="chart-visualization">
+                    <iframe width="90%" height="600" src="https://lookerstudio.google.com/embed/reporting/6da8bbb3-bc8e-4638-9620-e5269f563748/page/p_vy6rhqqeld" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                </div>
+            </div>
+            <!-- Top Right: Looker Studio Visualization -->
+        
+        </div>
+    </section>
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+        <iframe src="/dash/" width="90%" height="600px"></iframe>
+    </section>
+
+    <section id="actions">
+        <h3>Actions</h3>
+        <form id="add-customer-form">
+            <input type="text" name="customername" placeholder="Customer Name" required />
+            <input type="text" name="sales" placeholder="Sales" required />
+            <button type="submit">Add Customer</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('add-customer-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch('/api/add_customer', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(result => {
+                alert(result.status);
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+
+   
+    
+
+    <!-- Modal Dialogs for Adding Items -->
+    <div id="customer-modal" style="display: none;">
+        <h2>Add Customer</h2>
+        <form id="customer-form">
+            <!-- Customer form fields -->
+        </form>
+    </div>
+
+    <div id="order-modal" style="display: none;">
+        <h2>Add Order</h2>
+        <form id="order-form">
+            <!-- Order form fields -->
+        </form>
+    </div>
+
+    <div id="quote-modal" style="display: none;">
+        <h2>Add Quote</h2>
+        <form id="quote-form">
+            <!-- Quote form fields -->
+        </form>
+    </div>
+
+    <div id="invoice-modal" style="display: none;">
+        <h2>Add Invoice</h2>
+        <form id="invoice-form">
+            <!-- Invoice form fields -->
+        </form>
+    </div>
+
+    <div id="vendor-modal" style="display: none;">
+        <h2>Add Vendor</h2>
+        <form id="vendor-form">
+            <!-- Vendor form fields -->
+        </form>
+    </div>
+
+    <div id="product-modal" style="display: none;">
+        <h2>Add Product</h2>
+        <form id="product-form">
+            <!-- Product form fields -->
+        </form>
+    </div>
+
+</body>
+<!-- Footer Section -->
+<footer style="padding: 10px; text-align: center; border-top: 1px solid #ccc;">
+    <p>SCM-Company Ltd &copy; 2024</p>
+</footer>
+</html>
