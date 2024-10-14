@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="acadamy.css"> <!-- Updated stylesheet link -->
+    </head>
+<body>
+    <header>
+        <div class="topbar"> 
+            <img src="assets/logo.png" alt="APN" class="logo">
+            <div class="icons">
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search" name="search">
+                    </form>
+                </div>
+                <span class="notification-icon">🔔</span>
+                <div class="profile-circle">
+                    T
+                    <div class="dropdown-content">
+                        <a href="signin.html">Sign In</a>
+                        <a href="signup.html">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <h5>Africa Pharmaceutical Network  |  </h5>    
+                <li>     </li>            
+                <li><a href="#about-us">About Us</a></li>                 
+                <li><a href="acadamy.html">APN Academy</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#focus-areas">Focus Areas</a></li>
+                <li><a href="#our-approach">Our Approach</a></li>
+            </ul>
+        </nav>
+        <div class="sub-nav">
+            <p class="main-title">
+                Strengthening<br>
+                Pharmaceutical Systems for<br>
+                a Healthy & Prosperous<br>
+                Africa
+            </p>
+        </div>
+        <div class="pentagon"></div> <!-- Added Pentagon Shape -->
+        <div class="pentagon-small"></div> <!-- Added Smaller Pentagon Shape -->
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a onclick="showacadamy()" href="acadamy.html" id="acadamy-button">Student login</a></li> <!-- Fixed typo in id -->
+                <li><a onclick="showacadamy()" href="acadamy.html" id="acadamy-button">Tutor login</a></li> <!-- Fixed typo in id -->
+                <li><a href="#our-partners">e-repository</a></li>
+                <li><a href="#articles">Online Application</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="about-us">
+            <h3>About Us</h3>
+            <p>The African Pharmaceutical Network (APN) is a continental network of pharmaceutical professionals, academics, researchers, and industry experts dedicated to strengthening pharmaceutical systems across Africa. Established in 2018, APN aims to enhance the capacity of African pharmaceutical professionals to contribute to improved health outcomes and sustainable development on the continent.</p>
+        </div>
+        <section id="what-we-do">
+            <h2 class="section-title">What We Do</h2>
+            <div class="title-line"></div>
+            <div class="container-what-we-do">
+                <div class="what-we-do-card">
+                    <h3>Knowledge Sharing</h3>
+                    <p>Facilitate knowledge exchange among pharmaceutical professionals, stakeholders, and organizations across Africa.</p>
+                </div>
+                <div class="what-we-do-card">
+                    <h3>Policy Shaping</h3>
+                    <p>Advocate for responsive and market-driven policies to strengthen the pharmaceutical sector in Africa. </p>
+                </div>
+                <div class="what-we-do-card">
+                    <h3>Innovation Partnerships</h3>
+                    <p>Nurture partnerships aimed at fostering innovative approaches in pharmaceutical services and manufacturing.</p>
+                </div>
+                <div class="what-we-do-card">
+                    <h3>Workforce Development</h3>
+                    <p>Promote workforce development initiatives to enhance skills and capabilities within the pharmaceutical industry.</p>
+                </div>
+            </div>
+            <div class="explore-courses">
+                <a href="/what-we-do">Explore What We Do</a>
+            </div>
+        </section>
+        
+        <section id="what-we-offer">
+            <h2 class="section-title">What We Offer</h2>
+            <div class="title-line"></div>
+            <div class="container-offer">
+                <div class="offer-card">
+                    <h3>Regulatory Affairs Training</h3>
+                    <p>We provide comprehensive training to help organizations navigate regulatory frameworks within the African pharmaceutical industry.</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Pharmaceutical Quality Assurance</h3>
+                    <p>Enhance your skills in quality assurance to ensure safe and effective medicines across the continent.</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Pharmaceutical Supply Chain Management</h3>
+                    <p>Master supply chain management to optimize the flow of pharmaceutical products and services in Africa.</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Digital Health & Data Science in Pharmacy</h3>
+                    <p>Equip yourself with cutting-edge skills in digital health technologies and data science applications in pharmacy.</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Pharmaceutical Regulatory Affairs</h3>
+                    <p>Master the intricacies of pharmaceutical regulatory affairs to ensure compliance and market access.</p>
+                </div>
+            </div>
+            <div class="explore-courses">
+                <a href="/courses">Explore Courses</a>
+            </div>
+        </section>
+
+        <section id="our-partners">
+            <h2>Our Partners</h2>
+            <div class="container">
+                <div class="partner-card">
+                    <img src="assets/partner4-logo.png" alt="Partner 1">
+                </div>
+                <div class="partner-card">
+                    <img src="assets/partner1-logo.png" alt="Partner 2">
+                </div>
+                <div class="partner-card">
+                    <img src="assets/partner2-logo.png" alt="Partner 3">
+                </div>
+                <div class="partner-card">
+                    <img src="assets/partner3-logo.png" alt="Partner 4">
+                </div>
+            </div>
+        </section>
+        
+        <section id="articles">
+            <h2>Latest Articles</h2>
+            <div class="container">
+                <div class="article-card">
+                    <h3>Nurturing the Next Generation of Pharmaceutical Industry Professionals & Leaders</h3>
+                    <p>Access to affordable, quality assured and efficacious medicines and healthcare products is at the core of quality healthcare and aspirations for Universal Healthcare Coverage (UHC).</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="article-card">
+                    <h3>Regulatory Challenges in the African Market</h3>
+                    <p>Dive into the complexities of regulatory processes and how APN is helping companies navigate them.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="article-card">
+                    <h3>African Pharmaceutical Network (APN) partners with Bloom Public Health to Bolster Pharmaceutical Systems Strengthening Interventions in Africa</h3>
+                    <p>African Pharmaceutical Network (APN) partners with Bloom Public Health to Bolster Pharmaceutical Systems Strengthening Interventions in Africa</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="learners">
+            <!-- Learners page info -->
+        </section>
+        <section class="tutors">
+            <!-- Tutors section info -->
+        </section>
+        <section id="contact">
+            <h2 class="contact-title">Contact</h2>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:africanpharmanetwork@gmail.com">africanpharmanetwork@gmail.com</a></p>
+                <p>Address: Peponi Homes, House E6 Red Hill Road, Gachie Nairobi, Kenya</p>
+                <p>Join LinkedIn Group: <a href="https://www.linkedin.com/groups/your-group-id" target="_blank">African Pharmaceutical Network (APN)</a></p>
+                <p>YouTube Channel: <a href="https://www.youtube.com/channel/your-channel-id" target="_blank">African Pharmaceutical Network</a></p>
+            </div>
+        </section>
+        <script>
+            document.getElementById('home-button').addEventListener('click', () => window.location.href = '/');
+            document.getElementById('student-login').addEventListener('click', () => window.location.href = '/acadamy/acadamy.html');
+            document.getElementById('tutor-login').addEventListener('click', () => window.location.href = '/acadamy/acadamy.html');
+
+            function showLoginForm(role) {
+                document.getElementById('student-login-form').style.display = role === 'student' ? 'block' : 'none';
+                document.getElementById('tutor-login-form').style.display = role === 'tutor' ? 'block' : 'none';
+                document.getElementById('student-registration-form').style.display = 'none';
+                document.getElementById('tutor-registration-form').style.display = 'none';
+            }
+
+            function showRegistrationForm(role) {
+                document.getElementById('student-login-form').style.display = 'none';
+                document.getElementById('tutor-login-form').style.display = 'none';
+                document.getElementById('student-registration-form').style.display = role === 'student' ? 'block' : 'none';
+                document.getElementById('tutor-registration-form').style.display = role === 'tutor' ? 'block' : 'none';
+            }
+
+            function login(username, password, role) {
+                fetch('/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password, role })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = data.redirect; // Redirect to the appropriate dashboard
+                    } else {
+                        alert(data.message);
+                    }
+                });
+            }
+
+            function register(username, password, role) {
+                fetch(`/register/${role}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    if (data.success) {
+                        showLoginForm(role); // Show login form after successful registration
+                    }
+                });
+            }
+        </script>
+        <script src="client.js"></script>
+
+    </main>
+    <div class="fixed-consultation">
+        <img src="assets/whatsapp-logo.png" alt="WhatsApp" class="whatsapp-logo">
+        <button class="consultation-button" onclick="showacadamy()">Book a Free Consultation</button>
+    </div>
+    <footer>
+        <p>Copyright © 2024 African Pharmaceutical Network (APN)</p>
+    </footer>
+</body>
+</html>

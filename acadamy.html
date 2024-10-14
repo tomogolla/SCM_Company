@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>APN Academy</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="acadamy.css">
+        <script src="acadamy.js" defer></script> <!-- Link to the external JavaScript file -->
+    </head>
+<body>
+    <header>
+        <div class="topbar"> 
+            <img src="assets/logo.png" alt="APN" class="logo">
+            <div class="icons">
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search" name="search">
+                    </form>
+                </div>
+                <span class="notification-icon">🔔</span>
+                <div class="profile-circle">
+                    T
+                    <div class="dropdown-content">
+                        <a href="signin.html">Sign In</a>
+                        <a href="signup.html">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Welcome to APN Academy</h1>
+        
+        <div class="login-options">
+            <button id="home-button" class="home-button" onclick="goToLandingPage()">Home</button>
+            <button class="student-login" onclick="showStudentLogin()">Login as Student</button>
+            <button class="tutor-login" onclick="showTutorLogin()">Login as Tutor</button>
+        </div>
+
+        <!-- Student Login Form -->
+        <div id="student-login-form">
+            <h2>Student Login</h2>
+            <label for="student-username"><b>Username</b></label>
+            <input type="text" id="student-username" placeholder="Enter Username" required>
+            <label for="student-password"><b>Password</b></label>
+            <input type="password" id="student-password" placeholder="Enter Password" required>
+            <button onclick="studentLogin()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showStudentRegistration()">Register</a></p>
+        </div>
+
+        <!-- Tutor Login Form -->
+        <div id="tutor-login-form" style="display: none;">
+            <h2>Tutor Login</h2>
+            <label for="tutor-username"><b>Username</b></label>
+            <input type="text" id="tutor-username" placeholder="Enter Username" required>
+            <label for="tutor-password"><b>Password</b></label>
+            <input type="password" id="tutor-password" placeholder="Enter Password" required>
+            <button onclick="tutorLogin()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showTutorRegistration()">Register</a></p>
+        </div>
+
+        <!-- Student Registration Form -->
+        <div id="student-registration-form" style="display: none;">
+            <h2>Student Registration</h2>
+            <label for="new-student-username"><b>Username</b></label>
+            <input type="text" id="new-student-username" placeholder="Enter Username" required>
+            <label for="new-student-password"><b>Password</b></label>
+            <input type="password" id="new-student-password" placeholder="Enter Password" required>
+            <button onclick="registerStudent()">Register</button>
+        </div>
+
+        <!-- Tutor Registration Form -->
+        <div id="tutor-registration-form" style="display: none;">
+            <h2>Tutor Registration</h2>
+            <label for="new-tutor-username"><b>Username</b></label>
+            <input type="text" id="new-tutor-username" placeholder="Enter Username" required>
+            <label for="new-tutor-password"><b>Password</b></label>
+            <input type="password" id="new-tutor-password" placeholder="Enter Password" required>
+            <button onclick="registerTutor()">Register</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 APN Academy. All rights reserved.</p>
+    </footer>
+</body>
+<script src="client.js"></script>
+</html>

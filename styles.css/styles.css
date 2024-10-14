@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    
+}
+
+.topbar {
+    background-color: #333;
+    color: #ffffff;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 20px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons span {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.search-container input {
+    width: 100px;
+    height: 20px;
+    padding: 5px;
+    font-size: 10px;
+    padding-right: 30px;
+}
+
+.notification-icon {
+    font-size: 10px;
+}
+
+.profile-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    margin-left: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.profile-circle:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+nav {
+    color: #333;
+    background-color: #d3d4d4;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.sub-nav {
+    text-align: left;
+    height: 400px;
+    padding: 40px 20px 20px;
+    background-image: url('/acadamy/assets/image1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+.main-title {
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+}
+.quick-links {
+    padding-left: 100px;
+    padding-top: 100px;
+    justify-content: center;
+    flex-direction: row;
+    text-align: left;
+    height: 300px;
+    padding: 40px 20px 20px;
+    background-image: url('/acadamy/assets/laboratory.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+}
+.quick-links ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.quick-links ul li {
+    display: flex;
+    flex-direction: row;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-us {
+    padding-left: 100px;
+    padding-top: 100px;
+    text-align: center;
+}
+.about-us h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.about-us p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    width: 90%;
+    text-align: center;
+}
+.card {
+    width: calc(25% - 20px);
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card a {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card a:hover {
+    background-color: #45a049;
+}
+
+.fixed-consultation {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    z-index: 1000;
+    flex-direction: row-reverse;
+}
+
+.whatsapp-logo {
+    width: 40px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.consultation-button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    font-size: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 0;
+}
+
+.consultation-button:hover {
+    background-color: #0056b3;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.title-line {
+    width: 95%;
+    height: 2px;
+    background-color: #333;
+    margin: 0 auto 15px;
+}
+
+/* Container for What We Offer cards */
+.container-what-we-do {
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center the container */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Three columns */
+    gap: 20px; /* Space between cards */
+}
+
+/* Card Styles for What We Offer */
+.what-we-do-card {
+    background-color: #fff; /* Background color */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Transition effect */
+}
+
+.what-we-do-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.what-we-do-card h3 {
+    font-size: 24px; /* Font size for card title */
+}
+
+.what-we-do-card p {
+    font-size: 16px; /* Font size for card text */
+    color: #666; /* Text color */
+    margin-bottom: 15px; /* Space below the paragraph */
+}
+.container-offer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; 
+}
+.offer-card {
+    background-color: #fff; /* Background color */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    border-radius: 0; /* Rounded corners */
+    transition: transform 0.3s ease; /* Transition effect */
+}
+.offer-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+.learn-more {
+    display: inline-block; /* Make it a block element */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.learn-more:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+.explore-courses {
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 100px;
+    font-size: 20px;
+}
+
+#our-partners {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#our-partners h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.partner-card {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.partner-card img {
+    width: 150px;
+    height: auto;
+}
+
+#articles {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+#articles h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.article-card {
+    width: calc(33.333% - 20px);
+    background-color: #fff;
+    padding: 50px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card h3 {
+    font-size: 22px;
+    color: #333;
+}
+
+.article-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.article-card a {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.article-card a:hover {
+    background-color: #45a049;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Contact Section */
+#contact {
+    padding: 20px; /* Padding for the section */
+    background-color: #f8f9fa; /* Light background color */
+    text-align: left; /* Align text to the left */
+}
+.contact-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 70px;
+}
+.contact-info {
+    max-width: 800px; /* Maximum width for the contact info */
+    margin: 0 auto; /* Center the contact info */
+}
+
+.contact-info p {
+    font-size: 16px; /* Font size for contact info */
+    margin-bottom: 10px; /* Space between paragraphs */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #fff; /* Footer background color */
+    color: black; /* Footer text color */
+    text-align: center; /* Center text */
+    padding: 10px 0; /* Padding for the footer */
+    position: relative; /* Position relative for layout */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Full width */
+}
+
+/* Pentagon shape for the mid-right part */
+.pentagon {
+    position: fixed;
+    top: 50%; /* Center vertically */
+    right: 0; /* Align to the right */
+    width: 0;
+    height: 0;
+    border-left: 300px solid transparent; /* Adjust size as needed */
+    border-right: 100px solid transparent; /* Adjust size as needed */
+    border-bottom: 173.2px solid rgba(255, 0, 0, 0.5); /* Color and transparency */
+    transform: translateY(-50%); /* Center the shape */
+    z-index: -1; /* Send to back */
+}
+
+/* Smaller pentagon for the left side */
+.pentagon-small {
+    position: fixed;
+    top: 20%; /* Adjust position as needed */
+    left: 0; /* Align to the left */
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* Adjust size as needed */
+    border-right: 50px solid transparent; /* Adjust size as needed */
+    border-bottom: 86.6px solid rgba(0, 0, 255, 0.5); /* Color and transparency */
+    z-index: -1; /* Send to back */
+}

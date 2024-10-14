@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.topbar {
+    background-color: #333;
+    color: #ffffff;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 20px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons span {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.search-container input {
+    width: 100px;
+    height: 20px;
+    padding: 5px;
+    font-size: 10px;
+    padding-right: 30px;
+}
+
+.notification-icon {
+    font-size: 10px;
+}
+
+.profile-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    margin-left: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.profile-circle:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.login-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.student-login{
+    background-color: #b3b8b6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+}
+.tutor-login{
+    background-color: #b3b8b6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+}
+
+
+
+
+
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 300px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #b3b8b6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    padding: 10px 18px;
+    background-color: #b4645e;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 40%;
+    border-radius: 0%;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: flex;
+        float: none;
+    }
+    .cancelbtn {
+        width: 40%;
+    }
+}
+  
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #fff; /* Footer background color */
+    color: black; /* Footer text color */
+    text-align: center; /* Center text */
+    padding: 10px 0; /* Padding for the footer */
+    position: relative; /* Position relative for layout */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Full width */
+}
